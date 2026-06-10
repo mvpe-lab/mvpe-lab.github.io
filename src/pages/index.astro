@@ -32,6 +32,13 @@ const formatDate = (d: Date) =>
 
 <Base>
   <section class="hero">
+    {heroPhotos.length > 0 && (
+      <div class="hero-bg" aria-hidden="true">
+        {heroPhotos.map((src) => (
+          <img src={src} alt="" loading="eager" />
+        ))}
+      </div>
+    )}
     <div class="container">
       <span class="kicker">University of Calgary</span>
       <h1>Medium Voltage Power Electronics Laboratory</h1>
@@ -40,13 +47,6 @@ const formatDate = (d: Date) =>
         transformers, and energy storage systems — from new converter topologies to
         high-performance hardware prototypes.
       </p>
-      {heroPhotos.length > 0 && (
-        <div class="hero-photos">
-          {heroPhotos.map((src) => (
-            <img src={src} alt="Power electronics hardware prototype from our lab" loading="eager" />
-          ))}
-        </div>
-      )}
     </div>
   </section>
 
