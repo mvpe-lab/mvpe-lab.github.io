@@ -2,5 +2,5 @@
 name: "Phuc Luong"
 role: "MSc Student"
 order: 12
-photo: /images/people/phuc-luong.jpg
+photo: /images/people/phuc-luong.jpeg
 ---
