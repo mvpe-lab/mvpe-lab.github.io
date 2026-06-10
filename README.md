@@ -29,7 +29,7 @@ src/
   data/
     publications.json   auto-generated — do not edit by hand
   layouts/Base.astro    header, nav, footer
-  pages/                index (home + news), people, research, publications, news archive
+  pages/                index (home + news), team, research, publications, news archive
   styles/global.css     theme
 public/
   images/{people,news,research}/   uploaded photos

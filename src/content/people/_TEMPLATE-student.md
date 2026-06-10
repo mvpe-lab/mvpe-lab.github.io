@@ -21,5 +21,10 @@ role: "PhD Student"
 order: 10
 ---
 
-One or two sentences about their research topic (optional — shown nowhere yet, but kept
-for future use).
+Research focus: brief topic description here.
+
+- B.Sc. in Electrical Engineering, University of Example
+- Research interests: solid-state transformers, medium-voltage converters
+
+(The text and bullets above appear next to the photo on the Team page — edit freely or
+delete what you don't need.)

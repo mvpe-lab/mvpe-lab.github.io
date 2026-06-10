@@ -27,17 +27,26 @@ const groupLabels: Record<string, string> = {
   'Visiting Researcher': 'Visiting Researchers',
 };
 
-const grouped = groups
-  .map((role) => ({ role, members: people.filter((p) => p.data.role === role).sort(byOrder) }))
-  .filter((g) => g.members.length > 0);
+// Render each member's markdown body (research focus, background, etc.)
+const grouped = [];
+for (const role of groups) {
+  const members = people.filter((p) => p.data.role === role).sort(byOrder);
+  if (members.length === 0) continue;
+  grouped.push({
+    role,
+    members: await Promise.all(
+      members.map(async (p) => ({ p, Content: (await render(p)).Content }))
+    ),
+  });
+}
 
 const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
 ---
 
-<Base title="People">
+<Base title="Team">
   <section class="section">
     <div class="container">
-      <h2 class="section-title">People</h2>
+      <h2 class="section-title">Team</h2>
 
       {pi && (
         <div class="pi-card">
@@ -56,21 +65,39 @@ const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
       {grouped.map(({ role, members }) => (
         <>
           <h3 class="year-heading">{groupLabels[role]}</h3>
-          <div class="people-grid">
-            {members.map((p) => (
-              <div class="person-card">
+          <div class="member-list">
+            {members.map(({ p, Content }) => (
+              <div class="member-row">
                 <img src={p.data.photo ?? PLACEHOLDER} alt={p.data.name} loading="lazy" />
-                <h3>{p.data.name}</h3>
-                <p class="person-meta">
-                  {p.data.role}
-                  {p.data.start && ` · since ${p.data.start}`}
-                </p>
-                <p class="person-links">
-                  {p.data.email && <a href={`mailto:${p.data.email}`}>Email</a>}
-                  {p.data.website && <a href={p.data.website} rel="noopener">Website</a>}
-                  {p.data.scholar && <a href={p.data.scholar} rel="noopener">Scholar</a>}
-                  {p.data.linkedin && <a href={p.data.linkedin} rel="noopener">LinkedIn</a>}
-                </p>
+                <div>
+                  <h3>
+                    {p.data.website ? (
+                      <a href={p.data.website} rel="noopener">{p.data.name}</a>
+                    ) : p.data.scholar ? (
+                      <a href={p.data.scholar} rel="noopener">{p.data.name}</a>
+                    ) : (
+                      p.data.name
+                    )}
+                  </h3>
+                  <p class="member-meta">
+                    {p.data.role}
+                    {p.data.start && ` · since ${p.data.start}`}
+                    {p.data.email && (
+                      <>
+                        {' · '}
+                        <a href={`mailto:${p.data.email}`}>{p.data.email}</a>
+                      </>
+                    )}
+                  </p>
+                  <div class="member-body">
+                    <Content />
+                  </div>
+                  <p class="person-links">
+                    {p.data.scholar && <a href={p.data.scholar} rel="noopener">Google Scholar</a>}
+                    {p.data.linkedin && <a href={p.data.linkedin} rel="noopener">LinkedIn</a>}
+                    {p.data.website && <a href={p.data.website} rel="noopener">Website</a>}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

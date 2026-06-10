@@ -44,7 +44,7 @@ into the body of the news file.
 2. Open `_TEMPLATE-student.md` and copy its contents.
 3. Click **Add file → Create new file**, name it like `jane-doe.md`.
 4. Paste the template, fill in the fields (name, role, etc.), and delete the comment
-   lines. Roles are grouped automatically on the People page (PhD Students, MSc
+   lines. Roles are grouped automatically on the Team page (PhD Students, MSc
    Students, etc.).
 5. Commit. To add their photo, see below — photos go in `public/images/people/` and the
    file then needs the line `photo: /images/people/jane-doe.jpg`.

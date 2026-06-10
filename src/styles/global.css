@@ -343,37 +343,66 @@ a:hover {
   margin-bottom: 0.9rem;
 }
 
-.people-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.8rem 1.6rem;
-  margin-top: 1.5rem;
+/* Team members: one row per person, photo left, details right */
+.member-list {
+  margin-top: 0.4rem;
 }
 
-.person-card img {
+.member-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1.7rem;
+  align-items: start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.member-row:last-child {
+  border-bottom: none;
+}
+
+.member-row img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   object-fit: cover;
   border-radius: 8px;
   background: var(--bg-soft);
 }
 
-.person-card h3 {
-  margin: 0.7rem 0 0.1rem;
-  font-size: 1.05rem;
+.member-row h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1.12rem;
 }
 
-.person-card .person-meta {
+.member-meta {
   color: var(--muted);
+  font-size: 0.93rem;
+  margin: 0 0 0.4rem;
+}
+
+.member-body {
+  font-size: 0.97rem;
+}
+
+.member-body p {
+  margin: 0.3rem 0;
+}
+
+.member-body ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.member-body li {
+  margin: 0.12rem 0;
+}
+
+.person-links {
   font-size: 0.9rem;
+  margin: 0.5rem 0 0;
 }
 
-.person-card .person-links {
-  font-size: 0.88rem;
-  margin-top: 0.25rem;
-}
-
-.person-card .person-links a + a::before {
+.person-links a + a::before {
   content: "· ";
   color: var(--muted);
 }
@@ -545,6 +574,11 @@ a:hover {
   .pi-card,
   .research-area {
     grid-template-columns: 1fr;
+  }
+
+  .member-row {
+    grid-template-columns: 110px 1fr;
+    gap: 1.1rem;
   }
 
   .research-area img {
