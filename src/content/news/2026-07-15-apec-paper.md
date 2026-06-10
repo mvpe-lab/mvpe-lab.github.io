@@ -1,7 +1,7 @@
 ---
 title: "Best Presentation Award at APEC 2026"
 date: 2026-07-15
-image: public/images/news/apec_2026_award_flavio
+image: /images/news/apec_2026_award_flavio.png
 
 ---
 
