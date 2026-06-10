@@ -361,6 +361,12 @@ a:hover {
   border-bottom: none;
 }
 
+/* Text-only row (summer students: no photo) */
+.member-row--compact {
+  grid-template-columns: 1fr;
+  padding: 1.1rem 0;
+}
+
 .member-row img {
   width: 100%;
   aspect-ratio: 1;

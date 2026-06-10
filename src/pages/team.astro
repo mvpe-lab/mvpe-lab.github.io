@@ -32,8 +32,20 @@ for (const { label, roles } of sections) {
   });
 }
 
-// Summer students are listed by name only — no photos
-const summer = people.filter((p) => p.data.role === 'Summer Student').sort(byOrder);
+// Summer students appear under Current Students too, but as compact
+// text-only rows (no photo).
+const summer = await Promise.all(
+  people
+    .filter((p) => p.data.role === 'Summer Student')
+    .sort(byOrder)
+    .map(async (p) => ({ p, Content: (await render(p)).Content }))
+);
+
+// Make sure the Current Students section exists even if only summer
+// students are present.
+if (summer.length > 0 && !grouped.some((g) => g.label === 'Current Students')) {
+  grouped.push({ label: 'Current Students', members: [] });
+}
 
 const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
 ---
@@ -98,28 +110,29 @@ const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
                 </div>
               </div>
             ))}
+            {label === 'Current Students' &&
+              summer.map(({ p, Content }) => (
+                <div class="member-row member-row--compact">
+                  <div>
+                    <h3>{p.data.name}</h3>
+                    <p class="member-meta">
+                      Summer Student
+                      {p.data.email && (
+                        <>
+                          <br />
+                          <a href={`mailto:${p.data.email}`}>{p.data.email}</a>
+                        </>
+                      )}
+                    </p>
+                    <div class="member-body">
+                      <Content />
+                    </div>
+                  </div>
+                </div>
+              ))}
           </div>
         </>
       ))}
-
-      {summer.length > 0 && (
-        <>
-          <h3 class="year-heading">Summer Students</h3>
-          <ul class="alumni-list">
-            {summer.map((p) => (
-              <li>
-                <strong>{p.data.name}</strong>
-                {p.data.email && (
-                  <span class="person-meta">
-                    {' — '}
-                    <a href={`mailto:${p.data.email}`}>{p.data.email}</a>
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
 
       {alumni.length > 0 && (
         <>
