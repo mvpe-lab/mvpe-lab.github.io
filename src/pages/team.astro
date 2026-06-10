@@ -11,29 +11,21 @@ const byOrder = (a: (typeof people)[number], b: (typeof people)[number]) =>
 const pi = people.find((p) => p.data.role === 'Principal Investigator');
 const PiContent = pi ? (await render(pi)).Content : null;
 
-const groups = [
-  'Postdoctoral Researcher',
-  'PhD Student',
-  'MSc Student',
-  'Undergraduate Student',
-  'Visiting Researcher',
-] as const;
+// All students share one "Current Students" section; postdocs and visitors
+// get their own sections when the lab has them.
+const sections = [
+  { label: 'Postdoctoral Researchers', roles: ['Postdoctoral Researcher'] },
+  { label: 'Current Students', roles: ['PhD Student', 'MSc Student', 'Undergraduate Student'] },
+  { label: 'Visiting Researchers', roles: ['Visiting Researcher'] },
+];
 
-const groupLabels: Record<string, string> = {
-  'Postdoctoral Researcher': 'Postdoctoral Researchers',
-  'PhD Student': 'PhD Students',
-  'MSc Student': 'MSc Students',
-  'Undergraduate Student': 'Undergraduate Students',
-  'Visiting Researcher': 'Visiting Researchers',
-};
-
-// Render each member's markdown body (research focus, background, etc.)
+// Render each member's markdown body (topics + "From:" line)
 const grouped = [];
-for (const role of groups) {
-  const members = people.filter((p) => p.data.role === role).sort(byOrder);
+for (const { label, roles } of sections) {
+  const members = people.filter((p) => roles.includes(p.data.role)).sort(byOrder);
   if (members.length === 0) continue;
   grouped.push({
-    role,
+    label,
     members: await Promise.all(
       members.map(async (p) => ({ p, Content: (await render(p)).Content }))
     ),
@@ -53,18 +45,26 @@ const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
           <img src={pi.data.photo ?? PLACEHOLDER} alt={pi.data.name} />
           <div>
             <h3>{pi.data.name}</h3>
-            <p class="pi-meta">
+            <p class="member-meta">
               Principal Investigator · Assistant Professor<br />
               {pi.data.email && <a href={`mailto:${pi.data.email}`}>{pi.data.email}</a>}
             </p>
-            {PiContent && <PiContent />}
+            {PiContent && (
+              <div class="member-body">
+                <PiContent />
+              </div>
+            )}
+            <p class="person-links">
+              {pi.data.website && <a href={pi.data.website} rel="noopener">UCalgary Profile</a>}
+              {pi.data.scholar && <a href={pi.data.scholar} rel="noopener">Google Scholar</a>}
+            </p>
           </div>
         </div>
       )}
 
-      {grouped.map(({ role, members }) => (
+      {grouped.map(({ label, members }) => (
         <>
-          <h3 class="year-heading">{groupLabels[role]}</h3>
+          <h3 class="year-heading">{label}</h3>
           <div class="member-list">
             {members.map(({ p, Content }) => (
               <div class="member-row">
@@ -81,10 +81,9 @@ const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
                   </h3>
                   <p class="member-meta">
                     {p.data.role}
-                    {p.data.start && ` · since ${p.data.start}`}
                     {p.data.email && (
                       <>
-                        {' · '}
+                        <br />
                         <a href={`mailto:${p.data.email}`}>{p.data.email}</a>
                       </>
                     )}
@@ -92,11 +91,6 @@ const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
                   <div class="member-body">
                     <Content />
                   </div>
-                  <p class="person-links">
-                    {p.data.scholar && <a href={p.data.scholar} rel="noopener">Google Scholar</a>}
-                    {p.data.linkedin && <a href={p.data.linkedin} rel="noopener">LinkedIn</a>}
-                    {p.data.website && <a href={p.data.website} rel="noopener">Website</a>}
-                  </p>
                 </div>
               </div>
             ))}

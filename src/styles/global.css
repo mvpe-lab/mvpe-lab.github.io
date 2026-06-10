@@ -319,8 +319,8 @@ a:hover {
 
 .pi-card {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 2rem;
+  grid-template-columns: 180px 1fr;
+  gap: 1.8rem;
   align-items: start;
   margin-top: 1.6rem;
 }
@@ -381,11 +381,11 @@ a:hover {
 }
 
 .member-body {
-  font-size: 0.97rem;
+  font-size: 0.95rem;
 }
 
 .member-body p {
-  margin: 0.3rem 0;
+  margin: 0.15rem 0;
 }
 
 .member-body ul {
