@@ -1,0 +1,36 @@
+name: Refresh publications
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC (Sunday 11pm/midnight in Calgary)
+    - cron: "0 6 * * 1"
+  workflow_dispatch: # adds a "Run workflow" button under the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch publications (Scholar, falling back to OpenAlex)
+        run: python scripts/fetch_publications.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/publications.json
+          git diff --cached --quiet || git commit -m "Auto-update publications"
+          git push

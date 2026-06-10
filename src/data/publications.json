@@ -1,0 +1,222 @@
+{
+  "source": "google-scholar",
+  "updated": "2026-06-10T08:49:09.120205+00:00",
+  "publications": [
+    {
+      "title": "Single-Stage Single-Phase AC–DC MMC with AC-Port-Following Submodule Capacitor Voltages",
+      "authors": "PA Gray, K Huynh, FA Ramos",
+      "venue": "2026 IEEE Applied Power Electronics Conference and Exposition (APEC), 89-94",
+      "year": 2026,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:hFOr9nPyWt4C"
+    },
+    {
+      "title": "Single-Stage Isolated Bidirectional Current-Fed Modular Multilevel DC-AC Converter for High Step Ratio Applications",
+      "authors": "FA Ramos, PA Gray, K Huynh",
+      "venue": "2026 IEEE Applied Power Electronics Conference and Exposition (APEC), 630-637",
+      "year": 2026,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:-f6ydRqryjwC"
+    },
+    {
+      "title": "Single-Stage MMC for Single-Phase AC–DC Applications Using Anti-Series Half-Bridge Submodules with Ultra-Low Capacitance",
+      "authors": "PA Gray, K Huynh, FA Ramos, M Nabizadeh",
+      "venue": "2025 IEEE 26th Workshop on Control and Modeling for Power Electronics",
+      "year": 2025,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:hC7cP41nSMkC"
+    },
+    {
+      "title": "A bidirectional current-fed isolated mmc with partial soft-switching for high step ratio dc–dc applications",
+      "authors": "PA Gray, NJB Hosein, X Lan, PW Lehn",
+      "venue": "IEEE Transactions on Power Electronics 39 (7), 8281-8292",
+      "year": 2024,
+      "citations": 8,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:L8Ckcad2t8MC"
+    },
+    {
+      "title": "Integrated three-phase AC charger for vehicle applications with dual-inverter drive",
+      "authors": "P Lehn, G Philippe",
+      "venue": "US Patent 11,951,855",
+      "year": 2024,
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:dhFuZR0502QC"
+    },
+    {
+      "title": "Modulation-Enabled Single-Stage Current-Fed Dual Active Bridge AC-AC Converter with ZCS Turn-Off of Primary-Side Switches",
+      "authors": "PA Gray, KW Kwan",
+      "venue": "IECON 2024-50th Annual Conference of the IEEE Industrial Electronics Society",
+      "year": 2024,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:qUcmZB5y_30C"
+    },
+    {
+      "title": "Switch Current-Based Closed-Loop Control for ZCS Bidirectional Current-Fed DC-DC Converters",
+      "authors": "JT Luterbach, D Bowman, G Kish, P Gray",
+      "venue": "IECON 2024-50th Annual Conference of the IEEE Industrial Electronics Society",
+      "year": 2024,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:IWHjjKOFINEC"
+    },
+    {
+      "title": "Modular multi-level DC/DC converter with current-shaping",
+      "authors": "G Philippe, PW Lehn",
+      "venue": "US Patent 11,962,235",
+      "year": 2024,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:9ZlFYXVOiuMC"
+    },
+    {
+      "title": "Integrated three-phase AC charger for vehicle applications with dual-inverter drive",
+      "authors": "P Lehn, G Philippe",
+      "venue": "US Patent 11,607,965",
+      "year": 2023,
+      "citations": 7,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:mVmsd5A6BfQC"
+    },
+    {
+      "title": "A bidirectional current-fed isolated MMC with zero-current switching for high step ratio DC-DC applications",
+      "authors": "PA Gray, NJB Hosein, X Lan, PW Lehn",
+      "venue": "2023 11th International Conference on Power Electronics and ECCE Asia (ICPE",
+      "year": 2023,
+      "citations": 4,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:7PzlFSSx8tAC"
+    },
+    {
+      "title": "On-board bidirectional AC fast charger for electric vehicles",
+      "authors": "P Lehn, T Soong, S SEMSAR",
+      "venue": "US Patent 11,799,292",
+      "year": 2023,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:QIV2ME_5wuYC"
+    },
+    {
+      "title": "A modular multilevel DC–DC converter with flying capacitor converter like properties",
+      "authors": "PA Gray, PW Lehn, N Yakop",
+      "venue": "IEEE Transactions on Industrial Electronics 69 (7), 6774-6783",
+      "year": 2021,
+      "citations": 40,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:aqlVkmm33-oC"
+    },
+    {
+      "title": "A high-frequency MMC for DC–DC applications using a three-winding transformer with DC flux cancellation",
+      "authors": "PA Gray, ZC Ma, PW Lehn",
+      "venue": "IEEE Journal of Emerging and Selected Topics in Industrial Electronics 3 (3",
+      "year": 2021,
+      "citations": 28,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:Wp0gIr-vW9MC"
+    },
+    {
+      "title": "Discontinuous conduction mode operation of the current-shaping modular multilevel dc–dc converter",
+      "authors": "PA Gray, PW Lehn",
+      "venue": "IEEE Journal of Emerging and Selected Topics in Power Electronics 10 (2",
+      "year": 2020,
+      "citations": 14,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:4TOpqqG69KYC"
+    },
+    {
+      "title": "The current shaping modular multilevel DC–DC converter",
+      "authors": "PA Gray, PW Lehn",
+      "venue": "IEEE Transactions on Power Electronics 35 (10), 10050-10063",
+      "year": 2020,
+      "citations": 14,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:4DMP91E08xMC"
+    },
+    {
+      "title": "Control of a universal input voltage modular multilevel dc-dc converter",
+      "authors": "N Yakop, PA Gray, PW Lehn",
+      "venue": "2020 IEEE 21st Workshop on Control and Modeling for Power Electronics",
+      "year": 2020,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:M3ejUd6NZC8C"
+    },
+    {
+      "title": "An approach for selecting compensation capacitances in resonance-based EV wireless power transfer systems with switched capacitors",
+      "authors": "KA Cota, PA Gray, M Pathmanathan, PW Lehn",
+      "venue": "IEEE Transactions on Transportation Electrification 5 (4), 1004-1014",
+      "year": 2019,
+      "citations": 46,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:Y0pCki6q_DkC"
+    },
+    {
+      "title": "A Passive Cell Capacitor Voltage Control Method for the Current Shaping Modular Multilevel DC/DC Converter",
+      "authors": "P Gray, L Peter",
+      "venue": "2019 20th Workshop on Control and Modeling for Power Electronics (COMPEL), 1-7",
+      "year": 2019,
+      "citations": 5,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:Zph67rFs4hoC"
+    },
+    {
+      "title": "The Current Shaping Modular Multilevel DC/DC Converter with Current Doubling",
+      "authors": "PA Gray, PW Lehn",
+      "venue": "2019 IEEE Energy Conversion Congress and Exposition (ECCE), 5928-5934",
+      "year": 2019,
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:Se3iqnhoufwC"
+    },
+    {
+      "title": "An integrated bidirectional three-phase AC charger for vehicle applications with buck-boost capability",
+      "authors": "P Gray, P Lehn, S Wang",
+      "venue": "2018 IEEE Energy Conversion Congress and Exposition (ECCE), 517-523",
+      "year": 2018,
+      "citations": 9,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:zYLM7Y9cAGgC"
+    },
+    {
+      "title": "A new virtual harmonic impedance scheme for harmonic power sharing in an islanded microgrid",
+      "authors": "V Khadkikar, Y Cui, J Shi, Z Wang, DF García, RD Villarroel, B García, ...",
+      "venue": "IEEE Trans. Power Del. 31 (3), 936-945",
+      "year": 2016,
+      "citations": 4,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:ZeXyd9-uunAC"
+    },
+    {
+      "title": "New metric recommended for IEEE standard 1547 to limit harmonics injected into distorted grids",
+      "authors": "X Zong, PA Gray, PW Lehn",
+      "venue": "IEEE Transactions on Power Delivery 31 (3), 963-972",
+      "year": 2015,
+      "citations": 87,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:u5HHmVD_uO8C"
+    },
+    {
+      "title": "Application of Experimentally Measured Frequency Coupling matrices for Improved Harmonic Estimation",
+      "authors": "F Yahyaie, P Gray, P Lehn",
+      "venue": "CIGRE Canada 2014",
+      "year": 2014,
+      "citations": 5,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:IjCSPb-OGe4C"
+    },
+    {
+      "title": "Identification of relative component participation in harmonic measurements",
+      "authors": "F Yahyaie, PW Lehn, PA Gray",
+      "venue": "2014 16th International Conference on Harmonics and Quality of Power (ICHQP",
+      "year": 2014,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:qjMakFHDy7sC"
+    },
+    {
+      "title": "Harmonic Analysis Software Tool for Steady-State Analysis of Distorted Grids with Multiple Distributed Generators",
+      "authors": "P Gray, G Kish, P Lehn",
+      "venue": "CIGRE Canada 2014",
+      "year": 2014,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:UeHWp8X0CEIC"
+    },
+    {
+      "title": "Harmonic models of common converter topologies for accurate harmonic analysis of distribution systems",
+      "authors": "P Gray",
+      "venue": "",
+      "year": 2013,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:9yKSN-GCB0IC"
+    },
+    {
+      "title": "Time-domain derived frequency-domain voltage source converter model for harmonic analysis",
+      "authors": "PA Gray, PW Lehn",
+      "venue": "2012 IEEE 15th International Conference on Harmonics and Quality of Power",
+      "year": 2012,
+      "citations": 6,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:u-x6o8ySG0sC"
+    }
+  ]
+}

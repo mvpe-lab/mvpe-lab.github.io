@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+const news = (await getCollection('news')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const recent = news.slice(0, 8);
+const rendered = await Promise.all(
+  recent.map(async (entry) => ({ entry, Content: (await render(entry)).Content }))
+);
+
+const formatDate = (d: Date) =>
+  d.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+---
+
+<Base>
+  <section class="hero">
+    <div class="container">
+      <span class="kicker">University of Calgary</span>
+      <h1>Medium Voltage Power Electronics Laboratory</h1>
+      <p>
+        We research power electronics for transportation electrification, solid-state
+        transformers, and energy storage systems — from new converter topologies to
+        high-performance hardware prototypes.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="callout">
+        <strong>We are recruiting!</strong> Fully funded PhD and MSc positions are available
+        for the 2026/27 academic year. Interested students should email a CV to
+        <a href="mailto:philippe.gray@ucalgary.ca">philippe.gray@ucalgary.ca</a>.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">News</h2>
+      <ul class="news-list">
+        {rendered.map(({ entry, Content }) => (
+          <li class="news-item">
+            <div class="news-date">{formatDate(entry.data.date)}</div>
+            <div>
+              <h3 class="news-title">{entry.data.title}</h3>
+              <div class="news-body">
+                <Content />
+                {entry.data.image && (
+                  <img class="news-thumb" src={entry.data.image} alt={entry.data.title} loading="lazy" />
+                )}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      {news.length > recent.length && (
+        <a class="more-link" href="/news/">View all news →</a>
+      )}
+    </div>
+  </section>
+</Base>

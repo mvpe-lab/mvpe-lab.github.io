@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import pubData from '../data/publications.json';
+
+type Pub = {
+  title: string;
+  authors: string;
+  venue: string;
+  year: number | null;
+  citations: number;
+  url: string | null;
+};
+
+const pubs = pubData.publications as Pub[];
+
+const byYear = new Map<string, Pub[]>();
+for (const pub of pubs) {
+  const key = pub.year ? String(pub.year) : 'Other';
+  if (!byYear.has(key)) byYear.set(key, []);
+  byYear.get(key)!.push(pub);
+}
+const years = [...byYear.keys()].sort((a, b) => {
+  if (a === 'Other') return 1;
+  if (b === 'Other') return -1;
+  return Number(b) - Number(a);
+});
+
+// Bold lab-member author names (currently Dr. Gray) in author strings
+const highlight = (authors: string) =>
+  authors
+    .split(/,\s*/)
+    .map((a) => (/gray/i.test(a) ? `<strong>${a}</strong>` : a))
+    .join(', ');
+
+const updated = new Date(pubData.updated).toLocaleDateString('en-CA', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const sourceLabel =
+  pubData.source === 'google-scholar' ? 'Google Scholar' : 'OpenAlex';
+---
+
+<Base title="Publications">
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <p class="section-lede">
+        A complete, up-to-date list is also available on
+        <a href="https://scholar.google.com/citations?user=AU79cbgAAAAJ" rel="noopener">Google Scholar</a>.
+      </p>
+
+      {years.map((year) => (
+        <>
+          <h3 class="pub-year">{year}</h3>
+          <ul class="pub-list">
+            {byYear.get(year)!.map((pub) => (
+              <li>
+                <div class="pub-title">
+                  {pub.url ? <a href={pub.url} rel="noopener">{pub.title}</a> : pub.title}
+                  {pub.citations > 0 && (
+                    <span class="pub-cites">Cited by {pub.citations}</span>
+                  )}
+                </div>
+                <div class="pub-authors" set:html={highlight(pub.authors)} />
+                {pub.venue && <div class="pub-venue">{pub.venue}</div>}
+              </li>
+            ))}
+          </ul>
+        </>
+      ))}
+
+      <p class="pub-note">
+        This list updates automatically from {sourceLabel}. Last updated {updated}.
+      </p>
+    </div>
+  </section>
+</Base>

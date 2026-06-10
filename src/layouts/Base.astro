@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'The Medium Voltage Power Electronics Laboratory at the University of Calgary, led by Dr. Philippe Gray, researches transportation electrification, solid-state transformers, and energy storage systems.',
+} = Astro.props;
+
+const siteName = 'Medium Voltage Power Electronics Laboratory';
+const pageTitle = title ? `${title} | ${siteName}` : siteName;
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/people/', label: 'People' },
+  { href: '/research/', label: 'Research' },
+  { href: '/publications/', label: 'Publications' },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => {
+  const target = href.replace(/\/$/, '') || '/';
+  return target === '/' ? currentPath === '/' : currentPath.startsWith(target);
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="topbar"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand">
+          <span class="brand-name">
+            Medium Voltage <span class="accent">Power Electronics</span> Laboratory
+          </span>
+          <span class="brand-sub">Schulich School of Engineering · University of Calgary</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          {navItems.map((item) => (
+            <a href={item.href} class={isActive(item.href) ? 'active' : ''}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h4>Medium Voltage Power Electronics Laboratory</h4>
+            <p>Department of Electrical and Software Engineering</p>
+            <p>Schulich School of Engineering, University of Calgary</p>
+            <p>2500 University Dr NW, Calgary, AB, Canada T2N 1N4</p>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <p>Dr. Philippe Gray</p>
+            <p><a href="mailto:philippe.gray@ucalgary.ca">philippe.gray@ucalgary.ca</a></p>
+            <p>
+              <a href="https://scholar.google.com/citations?user=AU79cbgAAAAJ" rel="noopener">Google Scholar</a>
+              &nbsp;·&nbsp;
+              <a href="https://profiles.ucalgary.ca/philippe-gray" rel="noopener">UCalgary Profile</a>
+            </p>
+          </div>
+        </div>
+        <p class="footer-copy">
+          © {new Date().getFullYear()} Medium Voltage Power Electronics Laboratory, University of Calgary
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

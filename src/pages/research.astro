@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+const areas = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
+const rendered = await Promise.all(
+  areas.map(async (entry) => ({ entry, Content: (await render(entry)).Content }))
+);
+---
+
+<Base title="Research">
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <p class="section-lede">
+        Our group develops power electronic converters and systems spanning medium-voltage
+        grid applications to electrified transportation — combining new circuit topologies,
+        advanced control, and experimentally validated hardware prototypes.
+      </p>
+
+      {rendered.map(({ entry, Content }) => (
+        <div class={`research-area ${entry.data.image ? '' : 'no-image'}`}>
+          <div>
+            <h2>{entry.data.title}</h2>
+            <div class="research-body">
+              <Content />
+            </div>
+          </div>
+          {entry.data.image && <img src={entry.data.image} alt={entry.data.title} loading="lazy" />}
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

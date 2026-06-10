@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+const news = (await getCollection('news')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const rendered = await Promise.all(
+  news.map(async (entry) => ({ entry, Content: (await render(entry)).Content }))
+);
+
+const byYear = new Map<number, typeof rendered>();
+for (const item of rendered) {
+  const year = item.entry.data.date.getUTCFullYear();
+  if (!byYear.has(year)) byYear.set(year, []);
+  byYear.get(year)!.push(item);
+}
+
+const formatDate = (d: Date) =>
+  d.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+---
+
+<Base title="News">
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">News Archive</h2>
+      {[...byYear.entries()].map(([year, items]) => (
+        <>
+          <h3 class="year-heading">{year}</h3>
+          <ul class="news-list">
+            {items.map(({ entry, Content }) => (
+              <li class="news-item">
+                <div class="news-date">{formatDate(entry.data.date)}</div>
+                <div>
+                  <h3 class="news-title">{entry.data.title}</h3>
+                  <div class="news-body">
+                    <Content />
+                    {entry.data.image && (
+                      <img class="news-thumb" src={entry.data.image} alt={entry.data.title} loading="lazy" />
+                    )}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,95 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+const PLACEHOLDER = '/images/people/placeholder.svg';
+
+const people = await getCollection('people');
+const byOrder = (a: (typeof people)[number], b: (typeof people)[number]) =>
+  a.data.order - b.data.order || a.data.name.localeCompare(b.data.name);
+
+const pi = people.find((p) => p.data.role === 'Principal Investigator');
+const PiContent = pi ? (await render(pi)).Content : null;
+
+const groups = [
+  'Postdoctoral Researcher',
+  'PhD Student',
+  'MSc Student',
+  'Undergraduate Student',
+  'Visiting Researcher',
+] as const;
+
+const groupLabels: Record<string, string> = {
+  'Postdoctoral Researcher': 'Postdoctoral Researchers',
+  'PhD Student': 'PhD Students',
+  'MSc Student': 'MSc Students',
+  'Undergraduate Student': 'Undergraduate Students',
+  'Visiting Researcher': 'Visiting Researchers',
+};
+
+const grouped = groups
+  .map((role) => ({ role, members: people.filter((p) => p.data.role === role).sort(byOrder) }))
+  .filter((g) => g.members.length > 0);
+
+const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
+---
+
+<Base title="People">
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">People</h2>
+
+      {pi && (
+        <div class="pi-card">
+          <img src={pi.data.photo ?? PLACEHOLDER} alt={pi.data.name} />
+          <div>
+            <h3>{pi.data.name}</h3>
+            <p class="pi-meta">
+              Principal Investigator · Assistant Professor<br />
+              {pi.data.email && <a href={`mailto:${pi.data.email}`}>{pi.data.email}</a>}
+            </p>
+            {PiContent && <PiContent />}
+          </div>
+        </div>
+      )}
+
+      {grouped.map(({ role, members }) => (
+        <>
+          <h3 class="year-heading">{groupLabels[role]}</h3>
+          <div class="people-grid">
+            {members.map((p) => (
+              <div class="person-card">
+                <img src={p.data.photo ?? PLACEHOLDER} alt={p.data.name} loading="lazy" />
+                <h3>{p.data.name}</h3>
+                <p class="person-meta">
+                  {p.data.role}
+                  {p.data.start && ` · since ${p.data.start}`}
+                </p>
+                <p class="person-links">
+                  {p.data.email && <a href={`mailto:${p.data.email}`}>Email</a>}
+                  {p.data.website && <a href={p.data.website} rel="noopener">Website</a>}
+                  {p.data.scholar && <a href={p.data.scholar} rel="noopener">Scholar</a>}
+                  {p.data.linkedin && <a href={p.data.linkedin} rel="noopener">LinkedIn</a>}
+                </p>
+              </div>
+            ))}
+          </div>
+        </>
+      ))}
+
+      {alumni.length > 0 && (
+        <>
+          <h3 class="year-heading">Alumni</h3>
+          <ul class="alumni-list">
+            {alumni.map((p) => (
+              <li>
+                <strong>{p.data.name}</strong>
+                {p.data.note && <span class="person-meta"> — {p.data.note}</span>}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </div>
+  </section>
+</Base>
