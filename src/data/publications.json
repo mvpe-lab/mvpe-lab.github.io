@@ -1,222 +1,270 @@
 {
-  "source": "google-scholar",
-  "updated": "2026-06-10T08:49:09.120205+00:00",
+  "source": "openalex",
+  "updated": "2026-06-10T09:05:56.781567+00:00",
   "publications": [
     {
       "title": "Single-Stage Single-Phase AC–DC MMC with AC-Port-Following Submodule Capacitor Voltages",
-      "authors": "PA Gray, K Huynh, FA Ramos",
-      "venue": "2026 IEEE Applied Power Electronics Conference and Exposition (APEC), 89-94",
+      "authors": "Philippe Gray, Khai Huynh, Flavio A. Ramos",
+      "venue": "",
       "year": 2026,
       "citations": 0,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:hFOr9nPyWt4C"
+      "url": "https://doi.org/10.1109/apec51134.2026.11517157"
     },
     {
       "title": "Single-Stage Isolated Bidirectional Current-Fed Modular Multilevel DC-AC Converter for High Step Ratio Applications",
-      "authors": "FA Ramos, PA Gray, K Huynh",
-      "venue": "2026 IEEE Applied Power Electronics Conference and Exposition (APEC), 630-637",
+      "authors": "Flavio A. Ramos, Philippe Gray, Khai Huynh",
+      "venue": "",
       "year": 2026,
       "citations": 0,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:-f6ydRqryjwC"
+      "url": "https://doi.org/10.1109/apec51134.2026.11517176"
     },
     {
       "title": "Single-Stage MMC for Single-Phase AC–DC Applications Using Anti-Series Half-Bridge Submodules with Ultra-Low Capacitance",
-      "authors": "PA Gray, K Huynh, FA Ramos, M Nabizadeh",
-      "venue": "2025 IEEE 26th Workshop on Control and Modeling for Power Electronics",
+      "authors": "Philippe Gray, Khai Huynh, Flavio A. Ramos, Matin Nabizadeh",
+      "venue": "",
       "year": 2025,
       "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:hC7cP41nSMkC"
+      "url": "https://doi.org/10.1109/compel57166.2025.11121280"
     },
     {
-      "title": "A bidirectional current-fed isolated mmc with partial soft-switching for high step ratio dc–dc applications",
-      "authors": "PA Gray, NJB Hosein, X Lan, PW Lehn",
-      "venue": "IEEE Transactions on Power Electronics 39 (7), 8281-8292",
+      "title": "A Bidirectional Current-Fed Isolated MMC With Partial Soft-Switching for High Step Ratio DC–DC Applications",
+      "authors": "Philippe Gray, Noah J. B. Hosein, Xi Lan, Peter W. Lehn",
+      "venue": "IEEE Transactions on Power Electronics",
       "year": 2024,
-      "citations": 8,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:L8Ckcad2t8MC"
-    },
-    {
-      "title": "Integrated three-phase AC charger for vehicle applications with dual-inverter drive",
-      "authors": "P Lehn, G Philippe",
-      "venue": "US Patent 11,951,855",
-      "year": 2024,
-      "citations": 2,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:dhFuZR0502QC"
-    },
-    {
-      "title": "Modulation-Enabled Single-Stage Current-Fed Dual Active Bridge AC-AC Converter with ZCS Turn-Off of Primary-Side Switches",
-      "authors": "PA Gray, KW Kwan",
-      "venue": "IECON 2024-50th Annual Conference of the IEEE Industrial Electronics Society",
-      "year": 2024,
-      "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:qUcmZB5y_30C"
+      "citations": 6,
+      "url": "https://doi.org/10.1109/tpel.2024.3383651"
     },
     {
       "title": "Switch Current-Based Closed-Loop Control for ZCS Bidirectional Current-Fed DC-DC Converters",
-      "authors": "JT Luterbach, D Bowman, G Kish, P Gray",
-      "venue": "IECON 2024-50th Annual Conference of the IEEE Industrial Electronics Society",
+      "authors": "J T Luterbach, Daniel Bowman, Gregory J. Kish, Philippe Gray",
+      "venue": "",
       "year": 2024,
       "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:IWHjjKOFINEC"
+      "url": "https://doi.org/10.1109/iecon55916.2024.10905693"
     },
     {
-      "title": "Modular multi-level DC/DC converter with current-shaping",
-      "authors": "G Philippe, PW Lehn",
-      "venue": "US Patent 11,962,235",
+      "title": "Modulation-Enabled Single-Stage Current-Fed Dual Active Bridge AC-AC Converter with ZCS Turn-Off of Primary-Side Switches",
+      "authors": "Philippe Gray, K.W. Kwan",
+      "venue": "",
       "year": 2024,
+      "citations": 1,
+      "url": "https://doi.org/10.1109/iecon55916.2024.10905077"
+    },
+    {
+      "title": "A Bidirectional Current-Fed Isolated MMC with Zero-Current Switching for High Step Ratio DC-DC Applications",
+      "authors": "Philippe Gray, Noah J. B. Hosein, Xi Lan, Peter W. Lehn",
+      "venue": "",
+      "year": 2023,
+      "citations": 3,
+      "url": "https://doi.org/10.23919/icpe2023-ecceasia54778.2023.10213540"
+    },
+    {
+      "title": "A Modular Multilevel DC–DC Converter With Flying Capacitor Converter Like Properties",
+      "authors": "Philippe Gray, Peter W. Lehn, Netan Yakop",
+      "venue": "IEEE Transactions on Industrial Electronics",
+      "year": 2021,
+      "citations": 34,
+      "url": "https://doi.org/10.1109/tie.2021.3099229"
+    },
+    {
+      "title": "A High-Frequency MMC for DC–DC Applications Using a Three-Winding Transformer With DC Flux Cancellation",
+      "authors": "Philippe Gray, Ziyi Ma, Peter W. Lehn",
+      "venue": "IEEE Journal of Emerging and Selected Topics in Industrial Electronics",
+      "year": 2021,
+      "citations": 26,
+      "url": "https://doi.org/10.1109/jestie.2021.3116512"
+    },
+    {
+      "title": "The Current Shaping Modular Multilevel DC–DC Converter",
+      "authors": "Philippe Gray, Peter W. Lehn",
+      "venue": "IEEE Transactions on Power Electronics",
+      "year": 2020,
+      "citations": 12,
+      "url": "https://doi.org/10.1109/tpel.2020.2976001"
+    },
+    {
+      "title": "Discontinuous Conduction Mode Operation of the Current-Shaping Modular Multilevel DC–DC Converter",
+      "authors": "Philippe Gray, Peter W. Lehn",
+      "venue": "IEEE Journal of Emerging and Selected Topics in Power Electronics",
+      "year": 2020,
+      "citations": 11,
+      "url": "https://doi.org/10.1109/jestpe.2020.3013156"
+    },
+    {
+      "title": "Control of a Universal Input Voltage Modular Multilevel DC-DC Converter",
+      "authors": "Netan Yakop, Philippe Gray, Peter W. Lehn",
+      "venue": "",
+      "year": 2020,
       "citations": 0,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:9ZlFYXVOiuMC"
+      "url": "https://doi.org/10.1109/compel49091.2020.9265726"
     },
     {
-      "title": "Integrated three-phase AC charger for vehicle applications with dual-inverter drive",
-      "authors": "P Lehn, G Philippe",
-      "venue": "US Patent 11,607,965",
-      "year": 2023,
+      "title": "An Approach for Selecting Compensation Capacitances in Resonance-Based EV Wireless Power Transfer Systems With Switched Capacitors",
+      "authors": "K. Cota, Philippe Gray, Mehanathan Pathmanathan, Peter W. Lehn",
+      "venue": "IEEE Transactions on Transportation Electrification",
+      "year": 2019,
+      "citations": 43,
+      "url": "https://doi.org/10.1109/tte.2019.2927803"
+    },
+    {
+      "title": "The Current-Shaping Modular Multi-Level DC/DC Converter",
+      "authors": "Philippe Gray, Peter W. Lehn",
+      "venue": "",
+      "year": 2019,
       "citations": 7,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:mVmsd5A6BfQC"
-    },
-    {
-      "title": "A bidirectional current-fed isolated MMC with zero-current switching for high step ratio DC-DC applications",
-      "authors": "PA Gray, NJB Hosein, X Lan, PW Lehn",
-      "venue": "2023 11th International Conference on Power Electronics and ECCE Asia (ICPE",
-      "year": 2023,
-      "citations": 4,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:7PzlFSSx8tAC"
-    },
-    {
-      "title": "On-board bidirectional AC fast charger for electric vehicles",
-      "authors": "P Lehn, T Soong, S SEMSAR",
-      "venue": "US Patent 11,799,292",
-      "year": 2023,
-      "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:QIV2ME_5wuYC"
-    },
-    {
-      "title": "A modular multilevel DC–DC converter with flying capacitor converter like properties",
-      "authors": "PA Gray, PW Lehn, N Yakop",
-      "venue": "IEEE Transactions on Industrial Electronics 69 (7), 6774-6783",
-      "year": 2021,
-      "citations": 40,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:aqlVkmm33-oC"
-    },
-    {
-      "title": "A high-frequency MMC for DC–DC applications using a three-winding transformer with DC flux cancellation",
-      "authors": "PA Gray, ZC Ma, PW Lehn",
-      "venue": "IEEE Journal of Emerging and Selected Topics in Industrial Electronics 3 (3",
-      "year": 2021,
-      "citations": 28,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:Wp0gIr-vW9MC"
-    },
-    {
-      "title": "Discontinuous conduction mode operation of the current-shaping modular multilevel dc–dc converter",
-      "authors": "PA Gray, PW Lehn",
-      "venue": "IEEE Journal of Emerging and Selected Topics in Power Electronics 10 (2",
-      "year": 2020,
-      "citations": 14,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:4TOpqqG69KYC"
-    },
-    {
-      "title": "The current shaping modular multilevel DC–DC converter",
-      "authors": "PA Gray, PW Lehn",
-      "venue": "IEEE Transactions on Power Electronics 35 (10), 10050-10063",
-      "year": 2020,
-      "citations": 14,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:4DMP91E08xMC"
-    },
-    {
-      "title": "Control of a universal input voltage modular multilevel dc-dc converter",
-      "authors": "N Yakop, PA Gray, PW Lehn",
-      "venue": "2020 IEEE 21st Workshop on Control and Modeling for Power Electronics",
-      "year": 2020,
-      "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:M3ejUd6NZC8C"
-    },
-    {
-      "title": "An approach for selecting compensation capacitances in resonance-based EV wireless power transfer systems with switched capacitors",
-      "authors": "KA Cota, PA Gray, M Pathmanathan, PW Lehn",
-      "venue": "IEEE Transactions on Transportation Electrification 5 (4), 1004-1014",
-      "year": 2019,
-      "citations": 46,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:Y0pCki6q_DkC"
-    },
-    {
-      "title": "A Passive Cell Capacitor Voltage Control Method for the Current Shaping Modular Multilevel DC/DC Converter",
-      "authors": "P Gray, L Peter",
-      "venue": "2019 20th Workshop on Control and Modeling for Power Electronics (COMPEL), 1-7",
-      "year": 2019,
-      "citations": 5,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:Zph67rFs4hoC"
+      "url": "https://doi.org/10.23919/icpe2019-ecceasia42246.2019.8797053"
     },
     {
       "title": "The Current Shaping Modular Multilevel DC/DC Converter with Current Doubling",
-      "authors": "PA Gray, PW Lehn",
-      "venue": "2019 IEEE Energy Conversion Congress and Exposition (ECCE), 5928-5934",
+      "authors": "Philippe Gray, Peter W. Lehn",
+      "venue": "",
       "year": 2019,
       "citations": 3,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:Se3iqnhoufwC"
+      "url": "https://doi.org/10.1109/ecce.2019.8913125"
     },
     {
-      "title": "An integrated bidirectional three-phase AC charger for vehicle applications with buck-boost capability",
-      "authors": "P Gray, P Lehn, S Wang",
-      "venue": "2018 IEEE Energy Conversion Congress and Exposition (ECCE), 517-523",
+      "title": "A Passive Cell Capacitor Voltage Control Method for the Current Shaping Modular Multilevel DC/DC Converter",
+      "authors": "Philippe Gray, Peter W. Lehn",
+      "venue": "",
+      "year": 2019,
+      "citations": 2,
+      "url": "https://doi.org/10.1109/compel.2019.8769675"
+    },
+    {
+      "title": "An Integrated Bidirectional Three-Phase AC Charger for Vehicle Applications with Buck-Boost Capability",
+      "authors": "Philippe Gray, Peter W. Lehn, Sitan Wang",
+      "venue": "",
       "year": 2018,
       "citations": 9,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:zYLM7Y9cAGgC"
+      "url": "https://doi.org/10.1109/ecce.2018.8558192"
     },
     {
-      "title": "A new virtual harmonic impedance scheme for harmonic power sharing in an islanded microgrid",
-      "authors": "V Khadkikar, Y Cui, J Shi, Z Wang, DF García, RD Villarroel, B García, ...",
-      "venue": "IEEE Trans. Power Del. 31 (3), 936-945",
-      "year": 2016,
-      "citations": 4,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:ZeXyd9-uunAC"
+      "title": "Background Check for R4 OpSec, LLC",
+      "authors": "Thomas Hyres, Zachary Tea, Ted Yang, Philippe Gray, Timothy Springsteen, Alex Bierly",
+      "venue": "VTechWorks (Virginia Tech)",
+      "year": 2017,
+      "citations": 0,
+      "url": "http://hdl.handle.net/10919/77609"
     },
     {
-      "title": "New metric recommended for IEEE standard 1547 to limit harmonics injected into distorted grids",
-      "authors": "X Zong, PA Gray, PW Lehn",
-      "venue": "IEEE Transactions on Power Delivery 31 (3), 963-972",
+      "title": "New Metric Recommended for IEEE Standard 1547 to Limit Harmonics Injected Into Distorted Grids",
+      "authors": "Xianen Zong, Philippe Gray, Peter W. Lehn",
+      "venue": "IEEE Transactions on Power Delivery",
       "year": 2015,
-      "citations": 87,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:u5HHmVD_uO8C"
+      "citations": 70,
+      "url": "https://doi.org/10.1109/tpwrd.2015.2403278"
     },
     {
-      "title": "Application of Experimentally Measured Frequency Coupling matrices for Improved Harmonic Estimation",
-      "authors": "F Yahyaie, P Gray, P Lehn",
-      "venue": "CIGRE Canada 2014",
+      "title": "Bourgogne Franche-Comté : les grands établissements de la sphère productive",
+      "authors": "David Brion, Philippe Gray, Gilles Zemis",
+      "venue": "",
+      "year": 2015,
+      "citations": 0,
+      "url": "https://www.epsilon.insee.fr/jspui/bitstream/1/29587/1/IF_FC_11.pdf"
+    },
+    {
+      "title": "La Bourgogne d'ici 2030 : 9 300 personnes âgées dépendantes supplémentaires",
+      "authors": "David Brion, Philippe Gray",
+      "venue": "",
+      "year": 2015,
+      "citations": 0,
+      "url": "https://www.epsilon.insee.fr/jspui/handle/1/30579"
+    },
+    {
+      "title": "Application of Experimentally Measured Frequency Coupling Matrices for Improved Harmonic Estimation",
+      "authors": "Farhad Yahyaie, Philippe Gray, Peter W. Lehn",
+      "venue": "",
       "year": 2014,
       "citations": 5,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:IjCSPb-OGe4C"
+      "url": "http://ele.utoronto.ca/wp/wp-content/uploads/2014/11/C/F_Yahyaie-C47.pdf"
     },
     {
       "title": "Identification of relative component participation in harmonic measurements",
-      "authors": "F Yahyaie, PW Lehn, PA Gray",
-      "venue": "2014 16th International Conference on Harmonics and Quality of Power (ICHQP",
-      "year": 2014,
-      "citations": 0,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:qjMakFHDy7sC"
-    },
-    {
-      "title": "Harmonic Analysis Software Tool for Steady-State Analysis of Distorted Grids with Multiple Distributed Generators",
-      "authors": "P Gray, G Kish, P Lehn",
-      "venue": "CIGRE Canada 2014",
-      "year": 2014,
-      "citations": 0,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:UeHWp8X0CEIC"
-    },
-    {
-      "title": "Harmonic models of common converter topologies for accurate harmonic analysis of distribution systems",
-      "authors": "P Gray",
+      "authors": "Farhad Yahyaie, Peter W. Lehn, Philippe Gray",
       "venue": "",
+      "year": 2014,
+      "citations": 0,
+      "url": "https://doi.org/10.1109/ichqp.2014.6842837"
+    },
+    {
+      "title": "Egalité professionnelle femmes - hommes dans les Pays de la Loire : état des lieux",
+      "authors": "Amandine Rodrigues, Thierry Furet, Anne-Charlotte Lebreton, Claire Ropers, Yann Sicamois, Philippe Gray, Laurence Cochet",
+      "venue": "",
+      "year": 2014,
+      "citations": 0,
+      "url": "https://www.epsilon.insee.fr/jspui/handle/1/21464"
+    },
+    {
+      "title": "Harmonic Models of Common Converter Topologies for Accurate Harmonic Analysis of Distribution Systems",
+      "authors": "Philippe Gray",
+      "venue": "TSpace (University of Toronto)",
       "year": 2013,
       "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:9yKSN-GCB0IC"
+      "url": "http://hdl.handle.net/1807/42850"
     },
     {
       "title": "Time-domain derived frequency-domain voltage source converter model for harmonic analysis",
-      "authors": "PA Gray, PW Lehn",
-      "venue": "2012 IEEE 15th International Conference on Harmonics and Quality of Power",
+      "authors": "Philippe Gray, Peter W. Lehn",
+      "venue": "",
       "year": 2012,
-      "citations": 6,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:u-x6o8ySG0sC"
+      "citations": 5,
+      "url": "https://doi.org/10.1109/ichqp.2012.6381236"
+    },
+    {
+      "title": "Bassins de vie 2012 en Pays de la Loire : la difficile course à l'équipement du périurbain",
+      "authors": "Philippe Gray",
+      "venue": "",
+      "year": 2012,
+      "citations": 0,
+      "url": "https://www.epsilon.insee.fr/jspui/handle/1/14817"
+    },
+    {
+      "title": "Profil des créateurs d'entreprise en 2010 dans les Pays de la Loire",
+      "authors": "Philippe Gray, Delphine Legendre, Sébastien Seguin",
+      "venue": "",
+      "year": 2012,
+      "citations": 0,
+      "url": "https://www.epsilon.insee.fr/jspui/handle/1/13828"
+    },
+    {
+      "title": "Emploi et chômage dans les zones d'emploi des Pays de la Loire",
+      "authors": "Guillaume Coutard, Philippe Gray, Sébastien Seguin",
+      "venue": "",
+      "year": 2011,
+      "citations": 0,
+      "url": "http://www.epsilon.insee.fr:80/jspui/handle/1/48162"
+    },
+    {
+      "title": "Application of an electronic starter for a delayed coke process water jet cutting pump",
+      "authors": "Philippe Gray, A.T. Bagley, J.J. Zacharski",
+      "venue": "",
+      "year": 2002,
+      "citations": 0,
+      "url": "https://doi.org/10.1109/pcicon.1997.648194"
+    },
+    {
+      "title": "Experimental studies on spacecraft arcing",
+      "authors": "M. R. Carruth, J. A. Vaughn, R. BECHTEL, Philippe Gray",
+      "venue": "Journal of Spacecraft and Rockets",
+      "year": 1993,
+      "citations": 30,
+      "url": "https://doi.org/10.2514/3.25517"
+    },
+    {
+      "title": "Current flow in a plasma caused by dielectric breakdown",
+      "authors": "J. A. Vaughn, M. R. Carruth, Philippe Gray",
+      "venue": "NASA Technical Reports Server (NASA)",
+      "year": 1992,
+      "citations": 4,
+      "url": "https://ntrs.nasa.gov/api/citations/19920013130/downloads/19920013130.pdf"
+    },
+    {
+      "title": "High frequency CMOS switched capacitor filters for communication applications",
+      "authors": "Tat Choi, R.T. Kaneshiro, R.W. Brodersen, Philippe Gray, William Jett, Milton Wilcox",
+      "venue": "",
+      "year": 1983,
+      "citations": 38,
+      "url": "https://doi.org/10.1109/isscc.1983.1156518"
     }
   ]
 }
