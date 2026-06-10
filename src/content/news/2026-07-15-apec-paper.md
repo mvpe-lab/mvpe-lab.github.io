@@ -1,6 +1,8 @@
 ---
-title: "Paper accepted at APEC 2027"
+title: "Best Presentation Award at APEC 2026"
 date: 2026-07-15
+image: /images/apec_2026_award_flavio
+
 ---
 
-Our paper on single-stage MMCs was accepted at APEC 2027. Congratulations to the team!
+Congratulations to MSc student Flávio Alegretti Ramos on receiving the Best Presentation Award at the Applied Power Electronics Conference and Exposition (APEC) 2026! Well done, Flávio and co-author Khai Tran Huynh!
