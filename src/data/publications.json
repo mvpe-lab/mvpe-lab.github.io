@@ -1,6 +1,6 @@
 {
-  "source": "google-scholar",
-  "updated": "2026-06-10T09:13:09.958168+00:00",
+  "source": "openalex",
+  "updated": "2026-06-10T09:13:45.428074+00:00",
   "publications": [
     {
       "title": "Single-Stage Single-Phase AC–DC MMC with AC-Port-Following Submodule Capacitor Voltages",
@@ -205,7 +205,7 @@
     {
       "title": "Harmonic models of common converter topologies for accurate harmonic analysis of distribution systems",
       "authors": "P Gray",
-      "venue": "",
+      "venue": "TSpace (University of Toronto)",
       "year": 2013,
       "citations": 1,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:9yKSN-GCB0IC"
