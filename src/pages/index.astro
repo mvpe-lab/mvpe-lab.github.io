@@ -1,6 +1,22 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import Base from '../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+
+// Hero photos: every image in public/images/home/ is shown, in filename order.
+// Drop in 1-3 landscape photos; remove a file to remove it from the banner.
+const heroDir = path.join(process.cwd(), 'public', 'images', 'home');
+let heroPhotos: string[] = [];
+try {
+  heroPhotos = fs
+    .readdirSync(heroDir)
+    .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
+    .sort()
+    .map((f) => `/images/home/${f}`);
+} catch {
+  // folder missing -> plain banner without photos
+}
 
 const news = (await getCollection('news')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -24,6 +40,13 @@ const formatDate = (d: Date) =>
         transformers, and energy storage systems — from new converter topologies to
         high-performance hardware prototypes.
       </p>
+      {heroPhotos.length > 0 && (
+        <div class="hero-photos">
+          {heroPhotos.map((src) => (
+            <img src={src} alt="Power electronics hardware prototype from our lab" loading="eager" />
+          ))}
+        </div>
+      )}
     </div>
   </section>
 

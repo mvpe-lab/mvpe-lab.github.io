@@ -4,8 +4,7 @@ role: "Principal Investigator"
 email: "philippe.gray@ucalgary.ca"
 scholar: "https://scholar.google.com/citations?user=AU79cbgAAAAJ"
 website: "https://profiles.ucalgary.ca/philippe-gray"
-# Upload a photo to public/images/people/ and uncomment:
-# photo: /images/people/philippe-gray.jpg
+photo: /images/people/philippe-gray.jpg
 order: 1
 ---
 

@@ -68,6 +68,20 @@ Tips: use lowercase filenames with hyphens (no spaces), and resize portraits to 
 
 ---
 
+## Change the home-page banner photos
+
+The photo strip in the red banner shows **every image in `public/images/home/`**, in
+filename order (e.g. `prototype-1.jpg`, `prototype-2.jpg`). To change it:
+
+- **Add a photo** — upload a landscape photo to `public/images/home/`. One to three
+  photos look best; they share the row equally.
+- **Remove a photo** — delete its file from that folder.
+- **Reorder** — rename files so they sort in the order you want.
+
+Landscape photos around 1400 px wide and under ~400 KB keep the page fast.
+
+---
+
 ## Edit research areas
 
 Each research theme is one file in `src/content/research/`. Click the file → click the
