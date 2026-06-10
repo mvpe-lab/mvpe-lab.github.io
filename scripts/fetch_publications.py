@@ -25,6 +25,12 @@ SCHOLAR_USER_ID = "AU79cbgAAAAJ"  # Dr. Philippe Gray
 OPENALEX_AUTHOR_ID = "A5018395052"  # Dr. Philippe Gray (University of Calgary)
 CONTACT_EMAIL = "philippe.gray@ucalgary.ca"  # polite-pool contact for OpenAlex
 
+# The OpenAlex author profile conflates several people named "Philippe Gray"
+# (e.g. 1980s-2000s papers and French socioeconomic reports). Dr. Gray's real
+# works are all Engineering-adjacent and 2010 or later, so filter accordingly.
+OPENALEX_MIN_YEAR = 2010
+OPENALEX_ALLOWED_FIELDS = {"Engineering", "Energy", "Computer Science"}
+
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "src" / "data" / "publications.json"
 
 HEADERS = {
@@ -104,9 +110,14 @@ def fetch_google_scholar() -> list[dict]:
     return pubs
 
 
+def _norm_title(title: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", title.lower())
+
+
 def fetch_openalex() -> list[dict]:
     """Fetch publications from the OpenAlex API (official, no scraping)."""
     pubs: list[dict] = []
+    skipped = 0
     cursor = "*"
     while cursor:
         url = (
@@ -119,6 +130,12 @@ def fetch_openalex() -> list[dict]:
         data = resp.json()
 
         for work in data.get("results", []):
+            year = work.get("publication_year")
+            field = ((work.get("primary_topic") or {}).get("field") or {}).get("display_name")
+            if not year or year < OPENALEX_MIN_YEAR or field not in OPENALEX_ALLOWED_FIELDS:
+                skipped += 1
+                continue
+
             authors = ", ".join(
                 a.get("author", {}).get("display_name", "")
                 for a in work.get("authorships", [])
@@ -136,7 +153,7 @@ def fetch_openalex() -> list[dict]:
                     "title": work.get("display_name") or "Untitled",
                     "authors": authors,
                     "venue": venue,
-                    "year": work.get("publication_year"),
+                    "year": year,
                     "citations": work.get("cited_by_count", 0),
                     "url": url_best,
                 }
@@ -146,9 +163,69 @@ def fetch_openalex() -> list[dict]:
         if not data.get("results"):
             break
 
+    print(f"  (filtered out {skipped} OpenAlex works not matching year/field criteria)")
     if not pubs:
         raise RuntimeError("OpenAlex returned zero publications")
+
+    # OpenAlex often lacks venue names for IEEE conference papers — reuse the
+    # venue from the previously cached data (usually Scholar-sourced) when the
+    # title matches.
+    if OUTPUT_PATH.exists():
+        try:
+            cached = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+            cached_venues = {
+                _norm_title(p["title"]): p["venue"]
+                for p in cached.get("publications", [])
+                if p.get("venue")
+            }
+            for pub in pubs:
+                if not pub["venue"]:
+                    pub["venue"] = cached_venues.get(_norm_title(pub["title"]), "")
+        except (json.JSONDecodeError, KeyError, OSError):
+            pass
+
     return pubs
+
+
+def merge_with_cache(pubs: list[dict]) -> list[dict]:
+    """Merge OpenAlex results into the cached (usually Scholar-sourced) list.
+
+    OpenAlex misses some items Scholar has (e.g. patents), so never drop cached
+    entries: update citation counts on matches and append genuinely new works.
+    """
+    if not OUTPUT_PATH.exists():
+        return pubs
+    try:
+        cached = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        # Key on title AND year so conference + journal versions with the same
+        # title stay separate entries.
+        merged = {
+            (_norm_title(p.get("title", "")), p.get("year")): dict(p)
+            for p in cached.get("publications", [])
+        }
+    except (json.JSONDecodeError, KeyError, OSError):
+        return pubs
+
+    added = 0
+    for pub in pubs:
+        key = (_norm_title(pub["title"]), pub["year"])
+        if key not in merged and pub["year"]:
+            # Sources sometimes disagree by a year on the same work
+            # (early-access vs final publication date) — match within ±1.
+            for near_year in (pub["year"] - 1, pub["year"] + 1):
+                if (key[0], near_year) in merged:
+                    key = (key[0], near_year)
+                    break
+        if key in merged:
+            old = merged[key]
+            old["citations"] = max(old.get("citations", 0), pub["citations"])
+            if not old.get("venue") and pub["venue"]:
+                old["venue"] = pub["venue"]
+        else:
+            merged[key] = pub
+            added += 1
+    print(f"  (merged with cached list: {added} new, {len(merged)} total)")
+    return list(merged.values())
 
 
 def main() -> int:
@@ -164,7 +241,7 @@ def main() -> int:
         print(f"  Google Scholar failed: {exc}")
         try:
             print("Falling back to OpenAlex...")
-            pubs = fetch_openalex()
+            pubs = merge_with_cache(fetch_openalex())
             source = "openalex"
             print(f"  OK - {len(pubs)} publications")
         except Exception as exc2:  # noqa: BLE001
