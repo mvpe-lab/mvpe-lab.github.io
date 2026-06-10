@@ -512,18 +512,6 @@ a:hover {
   font-style: italic;
 }
 
-.pub-cites {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--ink);
-  background: var(--uc-gold);
-  border-radius: 99px;
-  padding: 0.05rem 0.55rem;
-  margin-left: 0.5rem;
-  vertical-align: 2px;
-}
-
 .pub-note {
   color: var(--muted);
   font-size: 0.9rem;

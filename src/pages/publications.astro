@@ -25,13 +25,6 @@ const years = [...byYear.keys()].sort((a, b) => {
   return Number(b) - Number(a);
 });
 
-// Bold lab-member author names (currently Dr. Gray) in author strings
-const highlight = (authors: string) =>
-  authors
-    .split(/,\s*/)
-    .map((a) => (/gray/i.test(a) ? `<strong>${a}</strong>` : a))
-    .join(', ');
-
 const updated = new Date(pubData.updated).toLocaleDateString('en-CA', {
   year: 'numeric',
   month: 'long',
@@ -59,11 +52,8 @@ const sourceLabel =
               <li>
                 <div class="pub-title">
                   {pub.url ? <a href={pub.url} rel="noopener">{pub.title}</a> : pub.title}
-                  {pub.citations > 0 && (
-                    <span class="pub-cites">Cited by {pub.citations}</span>
-                  )}
                 </div>
-                <div class="pub-authors" set:html={highlight(pub.authors)} />
+                <div class="pub-authors">{pub.authors}</div>
                 {pub.venue && <div class="pub-venue">{pub.venue}</div>}
               </li>
             ))}
