@@ -161,11 +161,12 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     100deg,
-    rgba(122, 0, 16, 0.95) 0%,
-    rgba(158, 0, 21, 0.85) 45%,
-    rgba(214, 0, 28, 0.55) 100%
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.62) 45%,
+    rgba(0, 0, 0, 0.38) 100%
   );
 }
 
