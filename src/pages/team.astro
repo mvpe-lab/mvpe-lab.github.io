@@ -32,6 +32,9 @@ for (const { label, roles } of sections) {
   });
 }
 
+// Summer students are listed by name only — no photos
+const summer = people.filter((p) => p.data.role === 'Summer Student').sort(byOrder);
+
 const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
 ---
 
@@ -40,6 +43,7 @@ const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
     <div class="container">
       <h2 class="section-title">Team</h2>
 
+      {pi && <h3 class="year-heading">Principal Investigator</h3>}
       {pi && (
         <div class="pi-card">
           <img src={pi.data.photo ?? PLACEHOLDER} alt={pi.data.name} />
@@ -97,6 +101,25 @@ const alumni = people.filter((p) => p.data.role === 'Alumni').sort(byOrder);
           </div>
         </>
       ))}
+
+      {summer.length > 0 && (
+        <>
+          <h3 class="year-heading">Summer Students</h3>
+          <ul class="alumni-list">
+            {summer.map((p) => (
+              <li>
+                <strong>{p.data.name}</strong>
+                {p.data.email && (
+                  <span class="person-meta">
+                    {' — '}
+                    <a href={`mailto:${p.data.email}`}>{p.data.email}</a>
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
 
       {alumni.length > 0 && (
         <>

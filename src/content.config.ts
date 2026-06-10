@@ -22,6 +22,7 @@ const people = defineCollection({
       'PhD Student',
       'MSc Student',
       'Undergraduate Student',
+      'Summer Student',
       'Visiting Researcher',
       'Alumni',
     ]),
