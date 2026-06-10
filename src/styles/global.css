@@ -319,8 +319,8 @@ a:hover {
 
 .pi-card {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 1.8rem;
+  grid-template-columns: 150px 1fr;
+  gap: 1.7rem;
   align-items: start;
   margin-top: 1.6rem;
 }
@@ -328,7 +328,7 @@ a:hover {
 .pi-card img {
   width: 100%;
   border-radius: 8px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   object-fit: cover;
   background: var(--bg-soft);
 }
