@@ -11,17 +11,77 @@ import Base from '../layouts/Base.astro';
         Schulich School of Engineering, University of Calgary.
       </p>
 
+      <h3 class="courses-heading">Current &amp; Upcoming</h3>
+
       <div class="course-list">
 
         <div class="course-card">
           <div class="course-header">
-            <span class="course-code">ENEL 000</span>
-            <span class="course-term">Fall / Winter</span>
+            <span class="course-code">ENEL 585</span>
+            <span class="course-term">Fall 2026</span>
           </div>
-          <h3 class="course-title">Course Name</h3>
+          <h4 class="course-title">Introduction to Power Electronics</h4>
           <p class="course-body">
-            Course description goes here.
+            Principles and applications of power electronic converters, including rectifiers,
+            DC–DC converters (non-isolated and isolated), and single- and three-phase inverters.
+            Core topics: switch commutation, power semiconductor devices, pulse-width modulation,
+            dynamic modelling and control, magnetics, losses, thermal management, and EMI.
+            Includes laboratory work and a design project involving the analysis, implementation,
+            and testing of a power electronic converter.
           </p>
+        </div>
+
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-code">ENEL 300</span>
+            <span class="course-term">Winter 2027</span>
+          </div>
+          <h4 class="course-title">Electrical and Computer Engineering Professional Skills</h4>
+          <p class="course-body">
+            Introduction to the electrical and computer engineering profession: fundamentals of
+            engineering design, testing, and product development; critical thinking and project
+            management; hardware design. Projects span a range of electrical and computer
+            engineering domains, with an emphasis on teamwork, rapid prototyping, and technical
+            communication.
+          </p>
+        </div>
+
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-code">ENEL 619.02</span>
+            <span class="course-term">Winter 2027</span>
+          </div>
+          <h4 class="course-title">Advanced Topics in Power Electronics</h4>
+          <p class="course-body">
+            Modeling and control of three-phase, grid-connected power electronic converters for
+            modern energy systems. Topics include converter modeling, modulation techniques,
+            reference-frame control (dq and αβ), synchronization methods, and grid-following and
+            grid-forming operation. Applications include solar photovoltaics, battery energy storage,
+            and distributed energy resources. Combines lectures with a hands-on, project-based
+            component using power electronics test platforms and hardware-in-the-loop simulation.
+          </p>
+        </div>
+
+      </div>
+
+      <h3 class="courses-heading">Past</h3>
+
+      <div class="course-list">
+
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-code">ENEL 585</span>
+            <span class="course-term">Winter 2024 · Winter 2025 · Fall 2025</span>
+          </div>
+          <h4 class="course-title">Introduction to Power Electronics</h4>
+        </div>
+
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-code">ENEL 300</span>
+            <span class="course-term">Winter 2025 · Winter 2026</span>
+          </div>
+          <h4 class="course-title">Electrical and Computer Engineering Professional Skills</h4>
         </div>
 
       </div>
@@ -30,15 +90,21 @@ import Base from '../layouts/Base.astro';
 </Base>
 
 <style>
+  .courses-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 2.2rem 0 0.2rem;
+  }
+
   .course-list {
-    margin-top: 1.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+    margin-top: 0.2rem;
   }
 
   .course-card {
-    padding: 1.6rem 0;
+    padding: 1.4rem 0;
     border-bottom: 1px solid var(--line);
   }
 
@@ -50,7 +116,7 @@ import Base from '../layouts/Base.astro';
     display: flex;
     align-items: baseline;
     gap: 1rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
   }
 
   .course-code {
@@ -58,7 +124,6 @@ import Base from '../layouts/Base.astro';
     font-size: 0.95rem;
     color: var(--uc-red);
     letter-spacing: 0.04em;
-    text-transform: uppercase;
   }
 
   .course-term {
@@ -67,13 +132,15 @@ import Base from '../layouts/Base.astro';
   }
 
   .course-title {
-    margin: 0 0 0.6rem;
-    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 650;
   }
 
   .course-body {
     margin: 0;
     color: #333;
     max-width: 72ch;
+    font-size: 0.99rem;
   }
 </style>
