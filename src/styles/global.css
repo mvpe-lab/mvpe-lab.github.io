@@ -297,13 +297,13 @@ a:hover {
   width: 100%;
 }
 
-.news-thumb {
+.news-body img.news-thumb {
   margin-top: 0.8rem;
   border-radius: 6px;
-  width: 420px;
+  max-height: 200px;
   max-width: 100%;
-  height: 220px;
-  object-fit: cover;
+  width: auto;
+  height: auto;
 }
 
 .more-link {
