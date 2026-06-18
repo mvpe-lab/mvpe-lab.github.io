@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Courses">
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Courses</h2>
+      <p class="section-lede">
+        Courses taught at the Department of Electrical and Software Engineering,
+        Schulich School of Engineering, University of Calgary.
+      </p>
+
+      <div class="course-list">
+
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-code">ENEL 000</span>
+            <span class="course-term">Fall / Winter</span>
+          </div>
+          <h3 class="course-title">Course Name</h3>
+          <p class="course-body">
+            Course description goes here.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .course-list {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .course-card {
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .course-card:last-child {
+    border-bottom: none;
+  }
+
+  .course-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .course-code {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--uc-red);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .course-term {
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+
+  .course-title {
+    margin: 0 0 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  .course-body {
+    margin: 0;
+    color: #333;
+    max-width: 72ch;
+  }
+</style>
