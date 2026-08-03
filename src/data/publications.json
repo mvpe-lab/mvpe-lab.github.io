@@ -1,6 +1,6 @@
 {
   "source": "openalex",
-  "updated": "2026-07-27T09:21:41.213746+00:00",
+  "updated": "2026-08-03T08:55:09.489846+00:00",
   "publications": [
     {
       "title": "Single-Stage Single-Phase AC–DC MMC with AC-Port-Following Submodule Capacitor Voltages",
@@ -43,20 +43,20 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:dhFuZR0502QC"
     },
     {
+      "title": "Switch Current-Based Closed-Loop Control for ZCS Bidirectional Current-Fed DC-DC Converters",
+      "authors": "JT Luterbach, D Bowman, G Kish, P Gray",
+      "venue": "IECON 2024-50th Annual Conference of the IEEE Industrial Electronics Society",
+      "year": 2024,
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:IWHjjKOFINEC"
+    },
+    {
       "title": "Modulation-Enabled Single-Stage Current-Fed Dual Active Bridge AC-AC Converter with ZCS Turn-Off of Primary-Side Switches",
       "authors": "PA Gray, KW Kwan",
       "venue": "IECON 2024-50th Annual Conference of the IEEE Industrial Electronics Society",
       "year": 2024,
       "citations": 1,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:qUcmZB5y_30C"
-    },
-    {
-      "title": "Switch Current-Based Closed-Loop Control for ZCS Bidirectional Current-Fed DC-DC Converters",
-      "authors": "JT Luterbach, D Bowman, G Kish, P Gray",
-      "venue": "IECON 2024-50th Annual Conference of the IEEE Industrial Electronics Society",
-      "year": 2024,
-      "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:IWHjjKOFINEC"
     },
     {
       "title": "Modular multi-level DC/DC converter with current-shaping",
