@@ -1,6 +1,6 @@
 {
-  "source": "google-scholar",
-  "updated": "2026-08-17T06:26:50.960233+00:00",
+  "source": "openalex",
+  "updated": "2026-08-24T06:31:02.079217+00:00",
   "publications": [
     {
       "title": "Fully Closed-Loop Control with Propagation Delay Compensation for the Soft-Switched Bidirectional Phase-Shifted Full Bridge Converter",
@@ -221,7 +221,7 @@
     {
       "title": "Harmonic models of common converter topologies for accurate harmonic analysis of distribution systems",
       "authors": "P Gray",
-      "venue": "",
+      "venue": "TSpace (University of Toronto)",
       "year": 2013,
       "citations": 1,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AU79cbgAAAAJ&pagesize=100&citation_for_view=AU79cbgAAAAJ:9yKSN-GCB0IC"
