@@ -1,6 +1,7 @@
 ---
 name: "Jibraan Khaleel"
-role: "Summer Student"
+role: "Alumni"
+note: "Summer Student"
 order: 21
 ---
 

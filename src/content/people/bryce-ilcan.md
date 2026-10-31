@@ -1,6 +1,7 @@
 ---
 name: "Bryce Ilcan"
-role: "Summer Student"
+role: "Alumni"
+note: "Summer Student"
 order: 20
 ---
 
